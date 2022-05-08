@@ -1,7 +1,10 @@
 {
-  "npmScope": "react-mui",
+  "npmScope": "check-react-latest",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
   },
   "implicitDependencies": {
     "package.json": {
@@ -12,7 +15,7 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
@@ -26,13 +29,21 @@
       }
     ]
   },
-  "projects": {
-    "main": {
-      "tags": []
-    },
-    "main-e2e": {
-      "tags": [],
-      "implicitDependencies": ["main"]
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "main"
 }
