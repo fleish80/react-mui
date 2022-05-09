@@ -1,5 +1,6 @@
 import styles from './mui-typography.module.scss';
 import {Typography} from '@mui/material';
+import React from 'react';
 
 /* eslint-disable-next-line */
 export interface MuiTypographyProps {
@@ -7,7 +8,8 @@ export interface MuiTypographyProps {
 
 export const MuiTypography = (props: MuiTypographyProps) => {
   return (
-    <div className={styles['container']}>
+    <React.Fragment>
+      <h1>MuiTypography</h1>
       <Typography variant="h1">h1 Heading</Typography>
       <Typography variant="h2">h2 Heading</Typography>
       <Typography variant="h3">h3 Heading</Typography>
@@ -20,7 +22,7 @@ export const MuiTypography = (props: MuiTypographyProps) => {
       <Typography variant="body1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, corporis deserunt dolore eaque enim explicabo magnam maxime nostrum nulla odit possimus rerum sapiente sequi sit ullam vel veniam voluptates voluptatibus!</Typography>
       <Typography variant="body2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus architecto aut distinctio, facere facilis impedit incidunt ipsa labore molestiae neque nesciunt officia possimus quasi sint, sit suscipit ut velit?</Typography>
       <Typography variant="h6" component="h1">h1 Heading, but h6 variant</Typography>
-    </div>
+    </React.Fragment>
   );
 };
 
