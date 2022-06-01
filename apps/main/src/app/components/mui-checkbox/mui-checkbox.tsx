@@ -6,7 +6,7 @@ import {Bookmark} from '@mui/icons-material';
 export interface MuiCheckboxProps {
 }
 
-export function MuiCheckbox(props: MuiCheckboxProps) {
+export function MuiCheckbox() {
 
   const [acceptConditions, setAcceptConditions] = useState(false);
 
@@ -24,8 +24,6 @@ export function MuiCheckbox(props: MuiCheckboxProps) {
       setSkills(skills.filter(skill => skill !== event.target.value));
     }
   }
-
-
 
   return (
     <React.Fragment>
