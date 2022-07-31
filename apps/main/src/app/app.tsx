@@ -6,9 +6,11 @@ import MuiSelect from './components/mui-select/mui-select';
 import MuiRadioButton from './components/mui-radio-button/mui-radio-button';
 import MuiCheckbox from './components/mui-checkbox/mui-checkbox';
 import MuiSwitch from './components/mui-switch/mui-switch';
+import MuiTab from './components/mui-tab/mui-tab';
 
 export const App = () => {
   return <div className={styles.app}>
+    <MuiTab/>
     <MuiSwitch />
     <MuiCheckbox/>
     <MuiRadioButton/>
